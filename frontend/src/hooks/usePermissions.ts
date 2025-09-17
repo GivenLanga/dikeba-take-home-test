@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Module, Permission, UserPermissions } from "../types";
 import { useAuth } from "../contexts/AuthContext";
+import { api } from "../utils/api";
 
 export function usePermissions(teamId?: string) {
   const { user, permissions, hasPermission } = useAuth();
